@@ -1,50 +1,88 @@
+# 🚀 Personal Portfolio
 
-# 🚀 Modern Portfolio — SolidJS + Tailwind CSS
+Modern, responsive portfolio website built with **SolidJS** and **TypeScript**.
 
-Односторінковий портфоліо з секціями Skills, About Me, Projects, Contact. Яскравий дизайн, плавна навігація, анімації, адаптивність, контактна форма через EmailJS.
+## ✨ Features
 
-## Секції
-- **Skills** — ваші ключові навички
-- **About Me** — коротко про себе
-- **Projects** — приклади проєктів
-- **Contact** — форма для зв'язку
+- **⚡ Fast Performance** - Built with SolidJS for optimal speed
+- **🎨 Modern Design** - Beautiful UI with Tailwind CSS
+- **📱 Responsive** - Works perfectly on all devices
+- **🖼️ Image Upload** - Upload custom images for projects
+- **🎛️ Admin Panel** - Easy content management
+- **🌙 Dark Theme** - Elegant dark design
 
-## Запуск локально
+## 🛠️ Tech Stack
 
-```bash
+- **Framework:** SolidJS
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Build Tool:** Vite
+- **Database:** Fireproof (local) + localStorage
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/portfolio.git
+   cd portfolio
+Install dependencies
+
 npm install
+Start development server
+
 npm run dev
-```
-Відкрийте [http://localhost:5173](http://localhost:5173) у браузері.
+Open browser
+Navigate to http://localhost:5173
 
-## Налаштування EmailJS
-1. Зареєструйтесь на [EmailJS](https://www.emailjs.com/)
-2. Створіть сервіс, шаблон та отримайте `SERVICE_ID`, `TEMPLATE_ID`, `USER_ID`
-3. Вкажіть ці значення у файлі `src/components/Contact.tsx`:
-	```ts
-	const SERVICE_ID = 'your_service_id';
-	const TEMPLATE_ID = 'your_template_id';
-	const USER_ID = 'your_user_id';
-	```
+Admin Panel
+URL: http://localhost:5173/admin
+Password: admin123
+📁 Project Structure
+portfolio/
+├── src/
+│   ├── components/     # React components
+│   ├── data/          # Data management
+│   ├── hooks/         # Custom hooks
+│   ├── utils/         # Utility functions
+│   └── admin/         # Admin panel
+├── public/            # Static assets
+└── package.json       # Dependencies
+🎯 Features Overview
 
-## Збірка для продакшн
+Home Page
+    Hero section with name and tagline
+    Skills showcase
+    Featured projects with custom images
+    Contact information
 
-```bash
-npm run build
-```
-Файли будуть у папці `dist`.
+Admin Panel
+    Edit hero section (name, tagline, description)
+    Manage skills list
+    Add/edit projects with background images
+    Upload profile photos
+    Configure contact details
 
-## Деплой на Netlify/Vercel
-- **Netlify**: просто оберіть репозиторій, Netlify автоматично розпізнає Vite-проєкт
-- **Vercel**: імпортуйте репозиторій, оберіть фреймворк Vite
-- Build command: `npm run build`
-- Output folder: `dist`
+🔧 Development
+Available Scripts
+    npm run dev - Start development server
+    npm run build - Build for production
+    npm run preview - Preview production build
 
-## Технології
-- SolidJS
-- Tailwind CSS
-- Vite
-- EmailJS
+Customization
+    Edit content in admin panel (/admin)
+    Customize styles in src/index.css
+    Modify components in src/components/
 
----
-_Всі стилі, анімації та компоненти легко змінюються під ваші потреби!_
+📝 License
+    MIT License - feel free to use for your own portfolio!
+
+👨‍💻 Author
+    Alex Grizonsky - Web Developer
+
+Made with ❤️ using SolidJS & TypeScript
