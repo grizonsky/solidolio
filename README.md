@@ -29,8 +29,8 @@ Modern, responsive portfolio website built with **SolidJS** and **TypeScript**.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/portfolio.git
-   cd portfolio
+   git clone https://github.com/grizonsky/solidolio.git
+   cd solidolio
 Install dependencies
 
 npm install
