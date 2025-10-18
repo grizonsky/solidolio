@@ -43,16 +43,8 @@ Navigate to http://localhost:5173
 Admin Panel
 URL: http://localhost:5173/admin
 Password: admin123
-📁 Project Structure
-portfolio/
-├── src/
-│   ├── components/     # React components
-│   ├── data/          # Data management
-│   ├── hooks/         # Custom hooks
-│   ├── utils/         # Utility functions
-│   └── admin/         # Admin panel
-├── public/            # Static assets
-└── package.json       # Dependencies
+
+
 🎯 Features Overview
 
 Home Page
