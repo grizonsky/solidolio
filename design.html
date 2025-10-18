@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Креативное Портфолио | Веб-разработчик</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Пользовательские анимации для появления */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 0.8s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .nav-link-active {
+            color: #38bdf8; /* text-sky-400 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
+
+    <!-- Шапка сайта -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-sky-400">CreativeFolio</a>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#skills" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300">Навыки</a>
+                    <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300">Обо мне</a>
+                    <a href="#projects" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300">Проекты</a>
+                    <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300">Контакты</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                        <i data-lucide="x" id="close-icon" class="hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/90 backdrop-blur-sm">
+            <div class="flex flex-col items-center px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#skills" class="nav-link block w-full text-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Навыки</a>
+                <a href="#about" class="nav-link block w-full text-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Обо мне</a>
+                <a href="#projects" class="nav-link block w-full text-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Проекты</a>
+                <a href="#contact" class="nav-link block w-full text-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+        <!-- Секция "Hero" -->
+        <section id="skills" class="min-h-screen flex flex-col items-center justify-center text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-down">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-violet-500">
+                    Креативный Разработчик
+                </span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl animate-fade-in-up">
+                Создаю визуально ошеломляющие и функциональные веб-приложения. Объединяю дизайн и технологии для создания красивых, удобных интерфейсов.
+            </p>
+            <a href="#projects" class="mb-12 bg-gradient-to-r from-sky-500 to-violet-600 text-white font-bold py-3 px-8 rounded-full hover:from-sky-600 hover:to-violet-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                Посмотреть работы
+            </a>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 w-full max-w-4xl">
+                <!-- Список навыков -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 hover:-translate-y-2 transition-all duration-300 transform-gpu"><p class="font-semibold">React</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 hover:-translate-y-2 transition-all duration-300 transform-gpu"><p class="font-semibold">JavaScript</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 hover:-translate-y-2 transition-all duration-300 transform-gpu"><p class="font-semibold">GSAP</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 hover:-translate-y-2 transition-all duration-300 transform-gpu"><p class="font-semibold">Three.js</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 hover:-translate-y-2 transition-all duration-300 transform-gpu"><p class="font-semibold">CSS3</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 hover:-translate-y-2 transition-all duration-300 transform-gpu"><p class="font-semibold">Tailwind CSS</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 hover:-translate-y-2 transition-all duration-300 transform-gpu"><p class="font-semibold">Next.js</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 hover:-translate-y-2 transition-all duration-300 transform-gpu"><p class="font-semibold">Node.js</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 hover:-translate-y-2 transition-all duration-300 transform-gpu"><p class="font-semibold">Git</p></div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 hover:-translate-y-2 transition-all duration-300 transform-gpu"><p class="font-semibold">Figma</p></div>
+            </div>
+        </section>
+
+        <!-- Секция "Обо мне" -->
+        <section id="about" class="py-20">
+             <h2 class="text-4xl font-bold text-center mb-12 flex items-center justify-center">
+                <i data-lucide="user" class="mr-4 text-sky-400"></i> Обо мне
+            </h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <div class="w-64 h-64 rounded-full mx-auto bg-gradient-to-br from-sky-500 to-violet-600 p-1 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img 
+                            src="https://placehold.co/400x400/1E293B/94A3B8?text=C" 
+                            alt="Портрет креативного разработчика" 
+                            class="w-full h-full rounded-full object-cover"
+                        />
+                    </div>
+                </div>
+                <div class="md:w-2/3 text-lg text-gray-300 space-y-4 text-center md:text-left">
+                    <p>Я разработчик со страстью к дизайну. Моя работа находится на стыке креативных визуальных эффектов и мощного кода. Я стремлюсь создавать веб-приложения, которые не только надежны и масштабируемы, но и обеспечивают увлекательный и приятный пользовательский опыт.</p>
+                    <p>Обладая прочными знаниями в области фронтенд-технологий и острым чувством эстетики, я специализируюсь на воплощении идей в жизнь с пиксельной точностью и плавной анимацией. Я считаю, что лучшие продукты создаются, когда дизайн и разработка работают в гармонии.</p>
+                    <p>Вне цифрового мира я нахожу вдохновение в современном искусстве, архитектуре и фотографии.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Проекты" -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 flex items-center justify-center">
+                <i data-lucide="briefcase" class="mr-4 text-sky-400"></i> Избранные Проекты
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Проект 1 -->
+                <div class="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-sky-500/30 transition-all duration-300 flex flex-col transform hover:-translate-y-2">
+                    <div class="overflow-hidden">
+                      <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Project+One" alt="Проект Один" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"/>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 text-sky-400">Проект Один</h3>
+                        <p class="text-gray-300 mb-4 flex-grow">Визуально яркий сайт для креативного агентства с акцентом на анимацию и пользовательский опыт.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">React</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">GSAP</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Tailwind</span>
+                        </div>
+                        <div class="mt-auto flex justify-end space-x-4">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-sky-400 transition-colors duration-300 flex items-center">
+                                <i data-lucide="external-link" class="w-5 h-5 mr-2"></i> Live Demo
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-sky-400 transition-colors duration-300 flex items-center">
+                                <i data-lucide="code" class="w-5 h-5 mr-2"></i> Исходный код
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Проект 2 -->
+                <div class="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-sky-500/30 transition-all duration-300 flex flex-col transform hover:-translate-y-2">
+                    <div class="overflow-hidden">
+                      <img src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Project+Two" alt="Проект Два" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"/>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 text-sky-400">Проект Два</h3>
+                        <p class="text-gray-300 mb-4 flex-grow">Интерактивная панель визуализации данных, созданная с помощью D3.js и React.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">React</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">D3.js</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Styled Comp.</span>
+                        </div>
+                        <div class="mt-auto flex justify-end space-x-4">
+                             <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-sky-400 transition-colors duration-300 flex items-center">
+                                <i data-lucide="external-link" class="w-5 h-5 mr-2"></i> Live Demo
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-sky-400 transition-colors duration-300 flex items-center">
+                                <i data-lucide="code" class="w-5 h-5 mr-2"></i> Исходный код
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Проект 3 -->
+                <div class="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-sky-500/30 transition-all duration-300 flex flex-col transform hover:-translate-y-2">
+                    <div class="overflow-hidden">
+                      <img src="https://placehold.co/600x400/EC4899/FFFFFF?text=Project+Three" alt="Проект Три" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"/>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 text-sky-400">Проект Три</h3>
+                        <p class="text-gray-300 mb-4 flex-grow">Стильное веб-приложение для современного стартапа, ориентированное на мобильные устройства.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Next.js</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">TypeScript</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Vercel</span>
+                        </div>
+                        <div class="mt-auto flex justify-end space-x-4">
+                             <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-sky-400 transition-colors duration-300 flex items-center">
+                                <i data-lucide="external-link" class="w-5 h-5 mr-2"></i> Live Demo
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-sky-400 transition-colors duration-300 flex items-center">
+                                <i data-lucide="code" class="w-5 h-5 mr-2"></i> Исходный код
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Контакты" -->
+        <section id="contact" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 flex items-center justify-center">
+                <i data-lucide="mail" class="mr-4 text-sky-400"></i> Давайте на связи
+            </h2>
+            <div class="max-w-2xl mx-auto">
+                <p class="text-center text-lg text-gray-300 mb-8">
+                    Есть проект на примете или просто хотите поздороваться? Я буду рад услышать от вас.
+                </p>
+                <!-- Примечание: Это форма только для UI. Для функциональности требуется сервис, такой как EmailJS, или бэкенд. -->
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Имя</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow" placeholder="Ваше имя" />
+                    </div>
+                     <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow" placeholder="your.email@example.com" />
+                    </div>
+                     <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow" placeholder="Ваше сообщение..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-gradient-to-r from-sky-500 to-violet-600 text-white font-bold py-3 px-8 rounded-full hover:from-sky-600 hover:to-violet-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                            Отправить сообщение
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900/50 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+             <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-sky-400 transition-colors duration-300"><i data-lucide="github"></i></a>
+                <a href="#" class="hover:text-sky-400 transition-colors duration-300"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="hover:text-sky-400 transition-colors duration-300"><i data-lucide="twitter"></i></a>
+            </div>
+            <p>&copy; 2024 CreativeFolio. Все права защищены.</p>
+        </div>
+    </footer>
+    
+    <!-- Кнопка "Наверх" -->
+    <button id="scroll-to-top" class="hidden fixed bottom-8 right-8 bg-sky-500 text-white p-3 rounded-full shadow-lg hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-sky-500 transition-all duration-300 transform hover:scale-110">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Инициализация иконок Lucide
+            lucide.createIcons();
+
+            const header = document.getElementById('header');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            
+            const sections = ['skills', 'about', 'projects', 'contact'];
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // --- Обработка прокрутки страницы ---
+            const handleScroll = () => {
+                const isScrolled = window.scrollY > 10;
+                
+                // Стилизация шапки при прокрутке
+                if (isScrolled) {
+                    header.classList.add('bg-gray-900/80', 'backdrop-blur-sm', 'shadow-lg');
+                } else {
+                    header.classList.remove('bg-gray-900/80', 'backdrop-blur-sm', 'shadow-lg');
+                }
+
+                // Показать/скрыть кнопку "Наверх"
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.remove('hidden');
+                } else {
+                    scrollToTopButton.classList.add('hidden');
+                }
+
+                // Подсветка активной ссылки в навигации
+                let currentSection = '';
+                const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+                sections.forEach(sectionId => {
+                    const sectionElement = document.getElementById(sectionId);
+                    if (sectionElement && scrollPosition >= sectionElement.offsetTop && scrollPosition < sectionElement.offsetTop + sectionElement.offsetHeight) {
+                        currentSection = sectionId;
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('nav-link-active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('nav-link-active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Вызов для начальной установки
+
+            // --- Мобильное меню ---
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+
+            // Закрытие меню при клике на ссылку
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+
+            // --- Кнопка "Наверх" ---
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+             // Предотвращение отправки формы
+            const form = document.querySelector('form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Спасибо за ваше сообщение! (Это демонстрация, данные не отправлены)');
+            });
+        });
+    </script>
+</body>
+</html>
